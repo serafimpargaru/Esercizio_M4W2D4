@@ -16,7 +16,7 @@ window.onload = getBooks = () => {
 const creaCard = function (libri) {
   const container = document.querySelector("#main_books");
   libri.map((x) => {
-    container.innerHTML += `<div class="card p-0" style="width: 18rem">
+    container.innerHTML += `<div class="card p-0 shadow mb-5 bg-body-tertiary rounded border-0" style="width: 18rem">
     <img src="${x.img}" class="card-img-top img-mod" alt="... " />
     <div class="card-body d-flex flex-column justify-content-between">
       <h5 class="card-title">${x.title}</h5>
@@ -32,12 +32,4 @@ const creaCard = function (libri) {
   });
 };
 
-//aggiunta dell'item al carrello
-let cartArray = [];
 
-const addButton = document.querySelector("#add_btn");
-addButton.addEventListener("click", addToCart);
-
-function addToCart(arrayCarrello, addButton) {
-
-}
